@@ -63,6 +63,8 @@ a.icon-link {color: rgba(250,250,250,0.7);}
 a.nav-button {transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;}
 a.icon-link:hover, a.navbar-title:hover {color: rgba(250,250,250,1); text-decoration: none;}
 a.navbar-title {display: inline-block; border-radius: 3px; text-align: center; color: rgba(250,250,250,0.7); font-family: 'Noto Sans', 'Helvetica', sans-serif; font-weight: 700;}
+a.social-link {text-align: center; margin-right: 10px;}
+a.social-link:hover {color: rgba(0,0,0,0.7);}
 li.nav-title {margin: 0 auto; list-style-type: none;}
 .nav-link, li.nav-item {font-size: 1em; color: white; font-family: 'Helvetica', sans-serif; list-style: none;}
 button.menu-bars {background-color: inherit; width: 40px; color: white; border: none; position: absolute;}
@@ -112,6 +114,7 @@ html {scroll-behavior: smooth;}
 .navbar {font-family: 'Noto Sans', 'Helvetica', 'Montserrat', sans-serif; background-color: rgba(250,250,250,0.2); width: 100%; position: absolute; z-index: 1;}
 .hero-container {display: block; margin: 0 auto; position: relative; width: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; overflow: hidden; height: 100vh; background-image: url("graphic1.jpg");}
 .hero-slide {font-weight: 600; text-align: center; color: white; background: rgba(0, 0, 0, 0.5); font-size: 2em; position: absolute; top: 35%; margin: 0 auto; width: 100%; overflow: hidden;}
+.social {margin-bottom: 10px;}
 #post1 {margin-top: 40px;}
 .posts {border-bottom: 1px solid #696867; padding-bottom: 10px;}
 #post10 {margin-bottom: 40px;}
