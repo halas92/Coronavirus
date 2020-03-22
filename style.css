@@ -41,6 +41,7 @@
 @media only screen and (max-width: 400px) {.page-link-container, p.page-link-subtitle, p.icon-subtitle, a.nav-arrow, .icon-links, .page-links {font-size: .75em;}
 p.pull-quote {font-size: .75em;}
 a.navbar-title {font-size: .6em;}
+.title {font-size: 24px;}
 #footer-text {font-size: 8px;}}
 
 /*Responsive navbar, Hero behaviors*/
