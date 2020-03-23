@@ -6,10 +6,11 @@
   .hero-container {height: 100vh;}
   a.nav-link, li.nav-item {display: inline;}
   a.navbar-title {margin: 0 auto; font-size: 1em;}
-  .title {font-size: 48px; padding-top: 45px;}
+  .title {font-size: 48px; padding-top: 45px; line-height: 58px;}
   .page-links {padding-left: 3%; padding-right: 3%; font-size: 16px;}
   p.icon-subtitle, p.page-link-subtitle {font-size: 10px;}
   p.pull-quote {font-size: 1.5em;}
+  p#first-graph, p.summary {font-size: 18px;}
   #footer-text {font-size: 12px;}}
 
 /*Responsiveness for mid-size viewports*/
@@ -29,19 +30,21 @@
     a.nav-link, li.nav-item {display: none;}
     a.navbar-title {font-size: .75em;}
     p.pull-quote {font-size: 1em;}
+    p#first-graph, p.summary {font-size: 16px;}
     button.menu-bars {margin-left: 0px; display: inline-block;}
     button.contact {margin-left: auto; margin-right: 15px;}
     .page-links {padding-left: 3%; padding-right: 3%;}
     #story1, #story2 {border-bottom: 1px solid #e2e2e2;}
-    .title {font-size: 28px; margin-top: 25px;}
+    .title {font-size: 28px; margin-top: 25px; line-height: 38px;}
     p.icon-subtitle, p.page-link-subtitle {font-size: 10px;}
     #footer-text {font-size: 10px;}}
 
 /*Responsiveness for mobile and smallest viewports*/
 @media only screen and (max-width: 400px) {.page-link-container, p.page-link-subtitle, p.icon-subtitle, a.nav-arrow, .icon-links, .page-links {font-size: .75em;}
+p#first-graph, p.summary {font-size: 14px;}
 p.pull-quote {font-size: .75em;}
 a.navbar-title {font-size: .6em;}
-.title {font-size: 24px;}
+.title {font-size: 24px; line-height: 34px;}
 #footer-text {font-size: 8px;}}
 
 /*Responsive navbar, Hero behaviors*/
@@ -54,10 +57,10 @@ a.navbar-title {font-size: .6em;}
 
 
 /*Links and interactives*/
-a:hover {text-decoration: none; color: rgba(0,0,0,0.7);}
+a:hover {color: rgba(0,0,0,0.7);}
 a {color: black;}
-a.graph-link {color: rgba(207,0,15,0.8);}
-a.graph-link:hover {color: rgba(207,0,15,1); text-decoration: none;}
+a.graph-link {color: rgba(207,0,15,0.7); text-decoration: underline;}
+a.graph-link:hover {color: rgba(207,0,15,1); text-decoration: underline;}
 a.nav-link, a.nav-button {color: black; font-weight: 700; font-family: 'Noto Sans', 'Helvetica', sans-serif; font-size: 1em;}
 li.nav-icon {list-style: none; padding-left: 4px; padding-right: 4px;}
 a.icon-link {color: rgba(250,250,250,0.7);}
@@ -73,12 +76,14 @@ button.menu-bars:hover {border: 1px solid black; border-radius: 3px;}
 i.fas.fa-bars {background color: #d4d4d4; border-radius: 3px;}
 div.fa-link::before {display: none;}
 .fa-link {vertical-align: top; scroll-behavior: smooth;}
+a#outro-link {color: rgba(138,173,249,0.9); text-decoration: underline;}
+a#outro-link:hover {color: rgba(138,173,249,1);}
 a#arrow {scroll-behavior: smooth; transition: .5s;}
 a#arrow:hover {font-size: 150%;}
 i.fas.fa-chevron-circle-down::before {color: red; scroll-behavior: smooth; transition: .5s;}
 a.nav-arrow {color: rgba(250,250,250,0.8); text-shadow: 1px 1px black;}
 a.nav-arrow:hover {font-size: 150%; transition: .5s; text-decoration: none; color: rgba(250,250,250,1);}
-a.icon-sub-link, a.page-link-aux {color: rgba(250,250,250,0.8); text-shadow: 1px 1px black;}
+a.icon-sub-link, a.page-link-aux {color: rgba(250,250,250,0.8); text-shadow: 1px 1px black; text-decoration: none;}
 a.icon-sub-link:hover, a.page-link-aux:hover {text-decoration: none; color: rgba(250,250,250,1);}
 .page-links {font-family: 'Helvetica', 'Arial', sans-serif; font-weight: 600; color: rgba(0,0,0,0.6); display: inline-block;}
 .page-links:hover {color: rgba(0,0,0,1); text-decoration: none;}
@@ -89,18 +94,19 @@ a.icon-sub-link:hover, a.page-link-aux:hover {text-decoration: none; color: rgba
 #footer-link:hover, #footer-logo:hover {color: rgba(255,255,255,1); text-decoration: none;}
 
 /*Text, etc.*/
-p {text-align:left; line-height:180%; font-family: 'Open Sans','Helvetica', arial, sans-serif; font-size: 15px;}
-.title {font-family: 'Open Sans','Helvetica', arial, sans-serif; font-weight: 700; color: black; line-height: 48px; margin-bottom: 15px; text-align: center;}
+p {text-align:left; line-height: 160%; font-family: 'Open Sans','Helvetica', arial, sans-serif; font-size: 15px;}
+.title {font-family: 'Open Sans','Helvetica', arial, sans-serif; font-weight: 700; color: black; margin-bottom: 15px; text-align: center;}
 #header {font-family: 'Libre Baskerville', 'Georgia', 'Times New Roman', serif; text-decoration: underline; text-shadow: 1px 1px black;}
 #subhead {font-family: 'Noto Sans', 'Helvetica', 'Montserrat', sans-serif; margin: 0 auto; font-weight: 200; text-shadow: 1px 1px black;}
 .hero-caption {font-weight: 500; font-family: 'Open Sans', 'Helvetica', arial, sans-serif; margin: 0 auto; color: rgb(179, 179, 179); font-size: 14px; padding-top: 10px; text-align: center;}
-p.first-letter  {font-size: 36px; font-family: 'Libre Baskerville', 'Georgia', 'Times New Roman', serif; background: red; color: white; line-height: .8; margin-top: .1em; margin-left: -.05em; margin-right: .05em; margin-bottom: 0px; font-weight: 400; padding: 5px 10px 5px 10px; width: 50px; display: inline-flex; text-shadow: 1px 1px black;}
-p.first-line {text-transform: uppercase; font-weight: bold; display: inline; margin-bottom: 0px;}
-p#first-graph {font-family: 'Open Sans','Helvetica', arial, sans-serif;}
+p.first-letter  {font-size: 36px; font-family: 'Libre Baskerville', 'Georgia', 'Times New Roman', serif; background: red; color: white; line-height: .8; margin-top: .1em; margin-left: -.05em; margin-right: .05em; margin-bottom: 0px; font-weight: 400; padding: 10px; width: 50px; display: inline-flex; text-shadow: 1px 1px black;}
+p.first-line {margin-bottom: 0px;}
+p#first-graph {font-family: 'Open Sans','Helvetica', arial, sans-serif; display: inline;}
 p.pull-quote {font-weight: 600; margin: 0 auto; width: 100%; padding-left: 1%; padding-right: 1%; text-align: center; text-shadow: 1px 1px black; font-style: italic; background: rgba(250,0,0,1); color: white;}
 .headline {font-family: 'Open Sans','Helvetica', arial, sans-serif; font-weight: 200; color: black; text-align: left; margin: 0 auto; padding-bottom: 5px; padding-top: 5px;}
-.byline {font-size: 10px; font-weight: 500; font-family: 'Open Sans', 'Helvetica', arial, sans-serif; color: rgb(179, 179, 179); margin: 0 auto; padding-bottom: 10px;}
+.byline {font-weight: 500; font-family: 'Open Sans', 'Helvetica', arial, sans-serif; margin: 0 auto; color: rgba(0,0,0,0.6); font-size: 14px; padding-top: 10px; padding-bottom: 10px; text-align: left;}
 .caption {font-size: 10px; font-weight: 500; font-family: 'Open Sans', 'Helvetica', arial, sans-serif; margin: 0 auto; color: rgb(179, 179, 179); text-align: left;}
+.outro {font-weight: 500; font-family: 'Open Sans', 'Helvetica', arial, sans-serif; margin: 0 auto; color: rgba(250,250,250,1); font-size: 14px; padding-top: 10px; text-align: left; background-color: rgba(207,0,15,1); padding: 10px;}
 .summary {margin-bottom: 5px;}
 p.icon-subtitle {font-family: 'Helvetica', 'Arial', sans-serif; font-weight: 600;}
 p.page-link-subtitle {font-family: 'Helvetica', 'Arial', sans-serif; font-weight: 600;}
@@ -116,6 +122,7 @@ html {scroll-behavior: smooth;}
 .hero-container {display: block; margin: 0 auto; position: relative; width: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; overflow: hidden; height: 100vh; background-image: url("graphic1.jpg");}
 .hero-slide {font-weight: 600; text-align: center; color: white; background: rgba(0, 0, 0, 0.5); font-size: 2em; position: absolute; top: 35%; margin: 0 auto; width: 100%; overflow: hidden;}
 .social {margin-bottom: 10px;}
+#intro-graph {display: inline-block;}
 #post1 {margin-top: 40px;}
 .posts {border-bottom: 1px solid #696867; padding-bottom: 10px;}
 #post10 {margin-bottom: 40px;}
