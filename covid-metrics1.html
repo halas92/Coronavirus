@@ -11,13 +11,13 @@ initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Data visualization featuring COVID-19 testing, cases, deaths and hospitalizations">
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://halas92.github.io/Coronavirus/covid-testing-cases-graphic.html">
+<meta property="og:url" content="https://halas92.github.io/Coronavirus/covid-metrics1.html">
 <meta property="og:title" content="COVID-19 testing metrics in Maryland">
 <meta property="og:description" content="Data visualization featuring COVID-19 testing, cases, deaths and hospitalizations">
 <meta property="og:image" content="hero-option2.jpg">
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://halas92.github.io/Coronavirus/covid-testing-cases-graphic.html">
+<meta property="twitter:url" content="https://halas92.github.io/Coronavirus/covid-metrics1.html">
 <meta property="twitter:title" content="COVID-19 testing metrics in Maryland">
 <meta property="twitter:description" content="Data visualization featuring COVID-19 testing, cases, deaths and hospitalizations">
 <meta property="twitter:image" content="hero-option2.jpg">
@@ -92,7 +92,7 @@ google.charts.load('current', {'packages':['corechart']});
         var options = {
           title : 'COVID-19 testing, cases, hospitalizations and deaths in Maryland',
           titleTextStyle: {fontName: 'Open Sans'},
-          vAxis: {title: 'Incidents', scaleType: 'null',
+          vAxis: {title: 'Incidents', scaleType: 'log',
           titleTextStyle: {fontName: 'Open Sans', italic: false},
           fontStyle: {fontName: 'Open Sans', italic: false}},
           hAxis: {title: 'Date',
