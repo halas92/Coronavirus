@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width,
+initial-scale=1, shrink-to-fit=no">
+
+<!-- JQuery Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<!--Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+<!-- Load c3.css -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.8/c3.min.css" rel="stylesheet">
+<!-- Load our CSS -->
+<!-- Load d3.js and c3.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.8/c3.min.js"></script>
+<!--Tab icon-->
+
+</head>
+
+<body>
+<div class="container">
+
+<div id="chart_div" style="max-width: 100%; height: 450px;"></div>
+
+</div> <!-- End container -->
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+
+google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Month', 'Total confirmed COVID-19 cases', 'Cumulative tests conducted'],
+          ['March 28',  992,      12508],
+          ['March 29',  1239,      13593],
+          ['March 30',  1413,      14729],
+          ['March 31',  1660,      16528],
+          ['April 1',  1985,      19218],
+          ['April 2',  2331,      21221],
+          ['April 3',  2758,      23690],
+          ['April 4',  3125,      25610],
+          ['April 5',  3609,      28337],
+          ['April 6',  4045,      29617],
+          ['April 7',  4371,      31627],
+          ['April 8',  5529,      38462],
+          ['April 9',  6185,      41529],
+          ['April 10',  6968,      44448],
+          ['April 11',  7694,      47238],
+          ['April 12',  8225,      49764],
+          ['April 13',  8936,      51751],
+          ['April 14',  9472,      53733],
+          ['April 15',  10032,     55763],
+          ['April 16',  10784,     58843],
+          ['April 17',  11572,     62009],
+          ['April 18',  12308,     65370],
+          ['April 19',  12830,     67891],
+          ['April 20',  13684,     71397],
+          ['April 21',  14193,     73635]
+        ]);
+
+        var options = {
+          title : 'Cumulative testing and daily COVID-19 cases in Maryland',
+          titleTextStyle: {fontName: 'Open Sans'},
+          vAxis: {title: 'Coronavirus cases and tests',
+          titleTextStyle: {fontName: 'Open Sans', italic: false},
+          fontStyle: {fontName: 'Open Sans', italic: false}},
+          hAxis: {title: 'Date',
+          titleTextStyle: {fontName: 'Open Sans', italic: false},
+          fontStyle: {fontName: 'Open Sans', italic: false},
+          slantedText: false, maxAlternation: 1},
+          legendtextStyle: {fontName: 'Open Sans'},
+          seriesType: 'bars',
+          series: {1: {type: 'line'}}        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+
+</script>
+
+</body>
