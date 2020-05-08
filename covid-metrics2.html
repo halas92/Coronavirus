@@ -1,0 +1,132 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width,
+initial-scale=1, shrink-to-fit=no">
+
+<!--Primary Meta Tags-->
+<title>COVID-19 testing metrics in Maryland</title>
+<meta name="title" content="COVID-19 testing metrics in Maryland">
+<meta name="description" content="Data visualization featuring COVID-19 testing, cases, deaths and hospitalizations">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://halas92.github.io/Coronavirus/covid-metrics1.html">
+<meta property="og:title" content="COVID-19 testing metrics in Maryland">
+<meta property="og:description" content="Data visualization featuring COVID-19 testing, cases, deaths and hospitalizations">
+<meta property="og:image" content="hero-option2.jpg">
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://halas92.github.io/Coronavirus/covid-metrics1.html">
+<meta property="twitter:title" content="COVID-19 testing metrics in Maryland">
+<meta property="twitter:description" content="Data visualization featuring COVID-19 testing, cases, deaths and hospitalizations">
+<meta property="twitter:image" content="hero-option2.jpg">
+
+<!-- JQuery Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<!--Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+<!-- Load c3.css -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.8/c3.min.css" rel="stylesheet">
+<!-- Load our CSS -->
+<!-- Load d3.js and c3.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.8/c3.min.js"></script>
+<!--Tab icon-->
+<link rel="shortcut icon" href="logo1.png" type="image/x-icon">
+<link rel="icon" href="logo1.png" type="image/x-icon">
+
+</head>
+
+<body>
+<div class="container">
+
+<div id="chart_div" style="max-width: 100%; height: 450px;"></div>
+
+</div> <!-- End container -->
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+
+google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Total confirmed COVID-19 cases', 'Daily hospitalizations', 'Cumulative tests conducted', 'Cumulative deaths confirmed', 'Newly confirmed COVID-19 cases'],
+          ['March 28',  992, 0, 12508, 5, 218],
+          ['March 29',  1239, 0, 13593, 10, 247],
+          ['March 30',  1413, 0, 14729, 15, 174],
+          ['March 31',  1660, 0, 16528, 18, 247],
+          ['April 1',  1985, 0, 19218, 31, 325],
+          ['April 2',  2331, 0, 21221, 36, 346],
+          ['April 3',  2758, 0, 23690, 42, 427],
+          ['April 4',  3125, 0, 25610, 53, 367],
+          ['April 5',  3609, 0, 28337, 67, 484],
+          ['April 6',  4045, 0, 29617, 91, 436],
+          ['April 7',  4371, 0, 31627, 103, 326],
+          ['April 8',  5529, 0, 38462, 124, 1158],
+          ['April 9',  6185, 0, 41529, 138, 656],
+          ['April 10',  6968, 0, 44448, 171, 783],
+          ['April 11',  7694, 0, 47238, 206, 726],
+          ['April 12',  8225, 0, 49764, 235, 531],
+          ['April 13',  8936, 0, 51751, 262, 711],
+          ['April 14',  9472, 0, 53733, 302, 536],
+          ['April 15',  10032, 0, 55763, 349, 560],
+          ['April 16',  10784, 0, 58843, 392, 752],
+          ['April 17',  11572, 0, 62009, 425, 788],
+          ['April 18',  12308, 0, 65370, 463, 736],
+          ['April 19',  12830, 0, 67891, 486, 522],
+          ['April 20',  13684, 0, 71397, 516, 854],
+          ['April 21',  14193, 0, 73635, 584, 509],
+          ['April 22',  14775, 0, 76529, 631, 582],
+          ['April 23',  15737, 0, 80100, 680, 962],
+          ['April 24',  16616, 0, 84716, 723, 879],
+          ['April 25',  17766, 0, 89123, 797, 1150],
+          ['April 26',  18581, 0, 96665, 827, 815],
+          ['April 27',  19487, 1513, 104976, 858, 906],
+          ['April 28',  20113, 1528, 107785, 929, 626],
+          ['April 29',  20849, 1610, 110929, 985, 736],
+          ['April 30',  21742, 1711, 114359, 1047, 893],
+          ['May 1',  23472, 1668, 120983, 1098, 1730],
+          ['May 2',  24473, 1657, 125522, 1156, 1001],
+          ['May 3',  25462, 1635, 132794, 1182, 989],
+          ['May 4',  26408, 1649, 136995, 1216, 946],
+          ['May 5',  27117, 1693, 140013, 1290, 709],
+          ['May 6',  28163, 1707, 144012, 1338, 1046],
+          ['May 7',  29374, 1683, 148600, 1401, 1211]
+        ]);
+
+        var options = {
+          title : 'COVID-19 testing, cases, hospitalizations and deaths in Maryland',
+          titleTextStyle: {fontName: 'Open Sans'},
+          vAxis: {title: 'Incidents', scaleType: 'log',
+          titleTextStyle: {fontName: 'Open Sans', italic: false},
+          fontStyle: {fontName: 'Open Sans', italic: false}},
+          hAxis: {title: 'Date',
+          titleTextStyle: {fontName: 'Open Sans', italic: false},
+          fontStyle: {fontName: 'Open Sans', italic: false},
+          slantedText: false, maxAlternation: 1},
+          legendtextStyle: {fontName: 'Open Sans'},
+          tooltiptextStyle: {fontName: 'Open Sans'},
+          seriesType: 'bars',
+          series: {0: {annotations: {textStyle: {fontName: 'Open Sans'}}, type: 'line'},
+          1: {annotations: {textStyle: {fontName: 'Open Sans'}}, color:'#8080ff'},
+          2: {annotations: {textStyle: {fontName: 'Open Sans'}}, type: 'line', color:'#ff751a'},
+          3: {annotations: {textStyle: {fontName: 'Open Sans'}}, type: 'line', color:'#c60920'},
+          4: {annotations: {textStyle: {fontName: 'Open Sans'}}, color:'#097499'}}        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+
+</script>
+
+</body>
